@@ -4,6 +4,12 @@
 	<meta charset="utf-8">
 	<title>웹 프로그래밍 과제</title>
 	<style>
+		body {
+			background-image:url(sky.jpg);
+			background-position: center;
+			background-size: cover;
+			background-attachment: fixed;
+		}
 		#title {
 			text-align: center;
 			font-size: 50px;
@@ -270,7 +276,6 @@
 			}
 			var canvas = document.getElementById("canvas");
 			canvas.style.position = 'absolute';
-		
 			canvas.style.left = '50%';
 			canvas.style.transform = 'translate(-50%)';
 			var ctx = canvas.getContext("2d");
