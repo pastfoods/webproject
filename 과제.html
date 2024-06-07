@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>웹 프로그래밍 과제</title>
+	<style>
+		#title {
+			text-align: center;
+			font-size: 50px;
+			font-weight: bold;
+			padding: 30px;
+		}
+		hr {margin-top:60px; 
+			border:0px; 
+			height:20px; 
+			width: 1400px; 
+			background: linear-gradient(to left, transparent, lightblue, transparent);
+		} 
+
+		input{
+			margin-left: 1360px;
+
+		}
+		#my {
+			width: 1400px;
+			height: 300px;
+			align-items: center;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		#my-title {
+			list-style-type: none; 
+			padding: 0px;
+			margin: 0px;
+			display: flex;
+			background-color: lightblue;
+		}
+
+		#my-title li {
+			padding: 20px;
+			margin-left: auto;
+			margin-right: auto;
+			font-size: 25px;
+			font-weight: bold;
+		}
+		#my-title li:hover{
+			color: green;
+		} 
+		#my-content{
+			background-color: ghostwhite;
+			padding: 40px;
+			font-size: 18px;
+		}
+		.subtitle{
+			margin-top: 180px;
+			font-size: 40px;
+			text-align: center;
+			font-weight: bold;
+		}
+		#imgs {
+			text-align: center;
+		}
+		#imgs div {
+			display: inline-block; 
+			margin: 70px;
+		}
+		#imgs img {
+			width: 200px;
+			height: 200px;
+			padding: 70px;
+		}
+		#imgs-name{
+			text-align: center; 
+			font-size: 20px;
+		}
+		#tech p{
+			text-align: center; 
+			font-size: 20px;
+		}
+		#tech dl{
+			width: 1400px;
+			align-items: center;
+			margin-left: auto;
+			margin-right: auto;	
+		}
+		#tech dt{
+			margin:25px;
+			text-align: center; 
+			font-size: 25px;
+			font-weight: bold;
+
+		}
+		#tech dd{
+			text-align: center;
+			font-size: 18px;
+		}
+		#companies-content{
+			text-align: center;
+			font-size: 18px;
+			width: 1400px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		#companies-content span{
+			font-size: 25px;
+			font-weight: bold;
+
+		}
+		#future{
+			text-align: center;
+			font-size: 18px;
+			width: 1400px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		#future p{
+
+			font-size: 25px;
+			font-weight: bold;
+
+		}
+		#future ul{
+			list-style-type: none; 
+		}
+		#hard{
+
+			text-align: center;
+			font-size: 18px;
+			width: 1400px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div id="title">202001789 성창훈</div>
+	</header>
+	<main>
+		<div id="my">
+			<ul id="my-title">
+				<li id="my-title-1" onclick="showcontent('num1')">주제 선정 동기와 이루고 싶은 목표</li>
+				<li id="my-title-2" onclick="showcontent('num2')">나의 성장 과정</li>
+				<li id="my-title-3" onclick="showcontent('num3')">최근 사회 이슈</li>
+			</ul>
+			<div id="my-content"></div>
+			<form><input type="button" value="닫기"  onclick="hideContent()"></form>
+		</div>
+
+		<div>
+			<div class="subtitle">현재 사용 가능한 언어</div>
+			<div id="imgs">
+				<img src="html.png"><img src="java.png"><img src="c.png">
+			</div>
+			<div id="imgs-name">현재 제가 사용가능한 언어는 HTML JAVA C# 입니다.</div></div>
+			<hr>
+			<div id="tech">
+				<div class="subtitle">관심기술</div>
+				<p>
+					현재 가장 관심을 가지고 있는 기술은 ai 를 활용한 게임 개발입니다. <br>
+					<img src="ai.jpg" style=" padding : 20px;width: 500px; height: 400px;"><br>
+					ai 기술이 게임개발에 활용되는건 다양한 방법이 있지만 그중 몇가지 가능성을 보면
+					ai를 통한 에셋생성, 지능형NPC, 안전강화, 게임 디자인 등이 있습니다.
+				</p>
+				<dl>
+					<dt>에셋 생성</dt>
+					<dd>생성형 AI는 캐릭터, 터레인, 초목, 조명, 심지어 오디오와 같은 게임 콘텐츠까지도 개발자가 직접 프로그래밍하는 대신 자동으로 생성하는 데 사용됩니다.<br> 개발 시간과 리소스를 절감할 수 있을 뿐만 아니라, 게임플레이 중에 예측이 불가능한 순열을 만들 수 있습니다.</dd>
+
+					<dt>지능형NPC</dt>
+					<dd>게임플레이 도중 NPC와의 상호 작용은 사전에 프로그래밍된 동작만 가능하기 때문에 그 한계가 명확합니다.<br> 생성형 AI를 이용하면 사실적이며, 플레이어의 액션에 현실적이면서도 예측할 수 없게 반응하는 등 적응성과 지능이 향상된 NPC를 구현할 수 있을 것입니다.</dd>
+
+					<dt>안전 강화</dt>
+					<dd>게임에서는 악성 행위와 전반적인 안전이 지속적인 문제였으며, 특히 연령대가 낮은 플레이어의 안전에 대한 우려가 많았습니다.<br> NLP과 생성형 AI의 결합을 통해 유해한 언어와 상호 작용 양측을 더 효과적으로 감지할 수 있도록 관리할수 있습니다.</dd>
+
+					<dt>
+					게임 디자인</dt>
+					<dd> 생성형 AI를 사용해 게임 메카닉스, 레벨, 캐릭터 플레이가 플레이어의 동작에 반응하고 그에 따라 동적으로 난이도가 조절되는 게임<br> 생성형 AI를 사용하면 특정 플레이어에게 적합한 맞춤형 게임 경험을 구현할 수 있습니다. </dd>
+
+					<dt>문제점</dt>
+					<dd>ai로 만든 기술인 만큼 여러 문제도 있습니다. 그중 가장 큰 문제로는 저작권입니다.<br>예시로 가장 큰 게임 판매 사이트인 스팀에서는 2023년 6월에 ai게임 판매를 금지했었습니다.<br>하지만 생성 ai사용을 표시하고, 불법적이고나 저작권 문제가 있는 콘텐츠가 없는지 심사를 통과해야한 가능하다는 조건을 걸고 24년 1월에 유통을 허락했습니다.
+					</dd>
+				</dl>
+			</div>
+			<hr>
+			<div>
+				<div class="subtitle" id="companies">사용 기업</div>
+				<p id="companies-content">
+					과거 국내의 유명 게임개발 기업들에서는 ai를 게임 개발이 아닌 고객대응과 유저 데이터관리 등 에서만 사용해 왔습니다.<br>
+					현재는  ai npc서비스, ai를 통한 게임 중계, 게임내 내레이션, 캐릭터 음성등에 사용하고 있습니다. 
+					그중 크래프톤 회사는 ai를 가장 많이 사용하고 있다고 보여집니다. <br>
+					<img src="krafton.png" style="width: 500px; height: 400px;" id="krafton">
+				</p>
+				<p id="companies-content">
+					크래프톤은 AI에 관련해 크게 두 개 조직을 운영하고 있습니다.<br><br>
+					<span>게임과 게임 개발에 접목할 수 있는 AI 기술 전반을 개발하는 딥러닝본부</span><br><br>
+					딥러닝본부에는 언어모델 등 각 분야를 연구하는 조직과 연구한 내용을 실제 게임과 게임 개발 과정에 활용하기 위한 툴을 만드는 서비스 조직 등이 속해 있습니다.<br>
+					이를 토대로 크래프톤은 게임 제작에 AI를 활용하기 위한 응용연구를 진행하고 있고, 실제 효과를 확인하고 있다. <br><br>
+
+					<span>AI전략을 수립하고 기술 확보 및 지운을 위한 AI 전략팀이 있는 전략실(Sterategy Dept)</span><br><br>게임 내용을 이해하는 LLM을 학습하거나 플레이가 가능한 봇을 만드는 것이나<br> QA나 현지화, 엔지니어링 등 게임 제작 과정에서 전문가 수준을 갖추는 것 등에 대해 연구하고 있습니다.<br><br>
+
+					<span>실제 활용사례</span><br><br>배틀그라운드에는 안티치트와 봇 개발에 관련해 펍지스튜디오와 딥러닝본부가 협업 중입니다.<br> 버추얼 프렌드는 챗GPT 수준의 자연어 처리 및 언어모델이 적용된 AI 플레이어로, 유저와 같이 멀티플레이를 하며 친구처럼 놀아주는 것을 목표로 합니다.<br> 인조이에는 프롬프트를 입력해 의류 패턴, 텍스처 등을 자동으로 생성하는 기능을 선보이기도 했습니다. <br>이 외에도 앞으로 서비스하는 게임 다수에 AI 기술을 적용할 계획을 가지고있습니다.<br><br>
+
+					<span>AI를 활용하는 직원 비중이 상당히 높습니다</span><br><br>사내 AI 기술 활융률은 작년 말 기준으로 97%에 달합니다. 실제로 회사에 돌아다녀보면 많은 분들이 한쪽 모니터에 챗GPT를 켜두고 일하고 있으며 서로의 경험을 공유하기도 합니다.자체 개발과 함께 깃허브 코파일럿, 챗GPT 등 외부 모델도 적극적으로 활용하고 있으며, 최근에 오픈AI와 챗GPT 엔터프라이즈 계약을 맺어 전사에 가장 좋은 버전의 챗GPT를 제공하고 있습니다. <br>
+
+					외부 도구 사용 비중이 높은 만큼 저작권 등 법적인 부분 체크가 중요합니다.외부 도구를 실무에 도입하기 전에 저작권 등 법적인 부분을 파악하고, 이를 해결하고 사용하는 것을 강조하고 있습니다. 사내 법무팀과 주기적으로 소통하며 AI 기술 활용 가이드라인과 체크리스트를 작성하고, 이를 사내에 공유하여 임직원 개개인이 책임감 있게 활용하도록 안내하고 있습니다.
+				</p>
+			</div>
+			<hr>
+			<div>
+				<div class="subtitle">FUTURE PLAN</div>
+				<div id="future">
+					<ul>
+						<li>
+							<p>코드 공부</p>
+							게임 제작의 경우 자체 엔진을 사용하거나 Unity 또는 UNREAL ENGUNE을 이용됩니다. 각각의 엔진은 C#과 C++언어를 기반으로 이루어져있습니다.<br>
+							현재 목표로 하고있는 크래프톤의 경우 UNREAL ENGUNE을 이용하기 때문에 UNREAL ENGUNE에서 사용되는 C++언어를 중점으로 공부할 예정입니다.<br>
+							C++공부를 위해 현재 가지고 있는 교재를 통해 기본을 다시 다지고 코드 연습사이트를 통해 지속적으로 공부할 예정입니다.<br>
+							현재 목표는 백준 사이트에서 골드 티어를 달성하는것입니다.
+						</li>
+						<li>
+							<p>UNREAL ENGUNE 연습</p>취업을 위해서는 포트폴리오가 필요할 것입니다. 포트폴리오에 들어갈 내용 중 게임을 직접 제작해 본 경험이 있다는 것은 큰 장점이 될 것 입니다.<br>
+							UNREAL ENGUNE은 언리얼 엔진은 액터, 블루프린트, 머티리얼, 레벨 등 다양한 요소들로 구성되어 있습니다.<br>
+							처음 이용해 보는것이므로 기본기능을 습하고, 온라인상의 열려있는 코드들을 찾아 살펴보고 어떠한 형태로 이루어져 있는지 파악해 볼 것 입니다.<br> 이후 간단한 게임을 만들어보며 연습해볼 예정입니다.
+						</li>
+						<li>
+							<p>게임제작</p>
+							개인 프로젝트를 9월부터 시작하여 제작해볼 예정입니다.<br>UNREAL ENGUNE을 연습함과 동시 프로젝트를 진행하는것은 어려울것이므로 2개월의 시간을 두었습니다.<br>
+							게임으로 제작할 내용은 연습기간 중에 작성할 것입니다.
+						</li>
+					</ul>
+				</div>
+				<hr>
+
+			</div>
+		</main>
+		<footer>
+			<div id="hard">
+				<p class="subtitle">과제중 어려웠던점</p>
+				<p>
+					해당 과제를 하면서 가장 어려웠던점은 아무것도 없는 상태에서 하나하나 모든 형태와 내용을 구상해야하는 것이었습니다.<br>
+					그전까지는 과제나 실습처럼 이미 정해진 형태를 만들기 위해 코드를 작성하다보니 정해진 형식으로 똑같이 만들기에 집중하였지만
+					내가 원하는 사이트를 지금까지 배워온 모든 코드를 활용하여 만들다보니 어떠한 코드를 어디에 적용하는게 좋을지 고민되었습니다.<br>
+				</p>
+				<p>
+					기술적 측면에서는 function showcontent(num)이 가장 오래걸렸습니다.<br>
+					이 함수는 리스트를 누르면 내용이 출력되도록 만든 함수인데 해당 방식은 처음부터 떠올렸지만 함수의 코드를 학기중 배운것은 중후반이였습니다.<br>
+					처음에는 select를 이용하여 작성하였으나 좀더 보기 좋은 형태인 function을 이용하는 형태로 변경하였습니다.
+				</p>
+			</div>
+			<hr>
+			<canvas id="canvas" width="1400" height="200"></canvas>
+		</footer>
+
+
+
+		<script>
+			function showcontent(num){
+				var content={
+					num1:"처음에는 주위 친구들의 추천으로 단순한 흥미와 재미를 위해 시작한 게임기였지만 시간이 지나며 이러한 게임이 어떻게 제작되고, 컴퓨터나 핸드폰과 같은 전자기기에서 작동되는지 알고 싶었으며 직접 게임을 만들어보고 싶어졌습니다.<br>이러한 이유로 이번 주제에서 게임 관련 산업에 대한 동향과 현재 큰 사건·사고, 그리고 제가 이루고자 하는 목표를 설명하고자 합니다.<br><br>제가 이루고 싶은 목표는 앞서 말했듯이 게임을 만드는 회사에 들어가 제가 직접 게임 제작 산업에 참여하는 것입니다.<br> 아직 제가 직접 만들고 싶은 게임이 무엇인지 감을 잡지 못했지만 다양한 게임 제작에 참여하여 여러 경험을 쌓고 제가 원하는 게임을 제작할 수 있는 능력과 경험이 쌓인다면 직접 제가 원하는 게임을 제작해 보고자 하는 게 제 목표입니다.",
+					num2:"처음에는 단순히 책을 읽고 뛰어노는 걸 좋아하는 아이였지만 점점 시대가 발전하면서 휴대폰이라는 전자기기가 발명되면서 게임에 흥미를 가지기 시작했습니다.<br> 주위 친구들이 모두 게임을 하면서 저 역시 함께하게 되었고 처음에는 롤을 통해 컴퓨터 게임에 흥미를 가지게 되었고 이후 게임에 관심 있는 친구들과 스팀을 통해 게임을 구매하고 여러 게임의 이슈를 찾아보게 되면서 좀 더 깊이 있게 게임과 관련된 흥미를 가지게 되었습니다.<br> 이때를 기점으로 게임을 직접 만들어보고 싶다는 생각이 들기 시작했고 프로그래밍 언어를 조금씩 영상과 책을 통해 배워보기 위해 시작했습니다.<br> 대학에 입학하여 다양한 형태의 언어들을 배워보고 컴퓨터의 작동 방식들을 배워가면서 게임 제작의 어려움과 복잡함을 알아갔고 이후 게임 제작 회사에 입사하여 게임을 제작해 보고 싶다는 생각을 가지게 되었습니다",
+					num3:'현재 사회 이슈는 다양하지만 제게 크게 영향을 가지는 게임산업 이슈를 살펴보면 여러 많은 문제들이 발생하고 있습니다.<br> 한국에서는 크게 확률 조작과 운영진들의 사기행각들이 이슈가 되고있고, 해외에서는 헬다이버즈의 플레이 스테이션 계정 연동 사건이 있습니다. 또한 국내외 상관없이 게임 개발자 구조조정 사건이 있습니다.<br> 이러한 사건 중 저는 게임 개발자의 구조조정 사건에 대해 다뤄보고자 합니다.<br><br> 현재 게임 개발자들의 구조조정이 많이 일어나는 이유로는 COVID 팬데믹의 해소, 과도한 고용, 불안정한 게임 산업계 등 다양하게 있지만 이 중 가장 큰 이유로는 불안정한 게임 산업계의 구조라고 생각합니다.<br> 현재 게임 산업들은 높은 비용과 높은 불안정성을 가지고 있습니다. 이러한 상황에서 산업이 실패한 경우 해당 지출을 메꿔야 하는 상황이 되었을 때 경영진들의 큰 투자나 불필요한 사무실 특전 등을 감소하는 대신 서버나 스토리지의 낭비 감소와 같은 해결 방안을 시도해 봤지만 결국 다른 곳이 아닌 직원들의 비용 절감을 해결 방안으로 선택했습니다.<br> 이런 이유로 많은 개발 회사에서 비용 절감을 위해 개발이 끝난 프로젝트의 개발자들이나 끝나지 않았더라도 비용이 부족하다면 개발자들을 해고 하고 있습니다. <br><a href="https://bbs.ruliweb.com/ps/board/300001/read/2306022">기사 내용(한글 번역)</a> <a href="https://www.ign.com/articles/ive-never-seen-it-this-bad-game-developers-explain-the-huge-layoffs-hitting-riot-epic-and-more">기사 내용(원문)</a>'
+				}; 
+				var contentDiv = document.getElementById("my-content");
+				contentDiv.innerHTML = content[num];
+				contentDiv.style.display = 'block';
+			}
+			function hideContent() {
+				var contentDiv = document.getElementById("my-content");
+				contentDiv.style.display = 'none';
+			}
+			var canvas = document.getElementById("canvas");
+			canvas.style.position = 'absolute';
+		
+			canvas.style.left = '50%';
+			canvas.style.transform = 'translate(-50%)';
+			var ctx = canvas.getContext("2d");
+			ctx.font = "90px italic";
+			ctx.fillStyle = "black";
+			ctx.textAlign = "center";
+			ctx.fillText("감사합니다", canvas.width/2, canvas.height/2);
+
+		</script>
+	</body>
+	</html>
